@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded", function() { 
+
 function totalAPagar(cantTickets,categoria){
     const valorTicket = 200;
     let total = cantTickets * valorTicket;
@@ -17,6 +19,13 @@ function totalAPagar(cantTickets,categoria){
 }
 
 let boton = document.getElementById("btnResumen")
+
+let formulario = document.getElementById("formTickets")
+
+formulario.addEventListener("submit", (e)=>{
+    e.preventDefault();
+}
+)
 
 boton.addEventListener( "click", ()=>{
     let cantidad = document.getElementById("inputCantidad").value
@@ -42,3 +51,5 @@ boton2.addEventListener( "click", ()=>{
 
 }
 )
+
+});
